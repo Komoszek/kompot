@@ -1,0 +1,7 @@
+@import 'components/Navbar.scss';
+
+
+.mainContainer {
+  height: calc(100% - $navbar-height - $navbar-bottom-border-height);
+  width: 100%;
+}

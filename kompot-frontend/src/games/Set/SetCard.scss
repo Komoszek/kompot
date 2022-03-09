@@ -1,0 +1,36 @@
+$card-width: 250px;
+$card-height: 300px;
+
+.setCard {
+  width: $card-width;
+  height: $card-height;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px,
+}
+
+.selectedCard {
+  background-color: #e0e0e0;
+  border: 2px #c0c0c0 solid;
+  margin: -2px;
+}
+
+.landscape {
+  /*flex-direction: row;
+  width: $card-height;
+  height: $card-width;
+  gap: 0px;*/
+}
+
+.landscape svg {
+  //transform: rotate(90deg);
+}
+
+.taken {
+  opacity: 0.8;
+  background-color: #f0f0f0;
+}

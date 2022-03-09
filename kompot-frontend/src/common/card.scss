@@ -1,0 +1,15 @@
+$transitionTime-hover: 100ms;
+
+.card {
+  transition-duration: $transitionTime-hover;
+  background-color: #fefefe;
+}
+
+.card:hover {
+  transition-duration: $transitionTime-hover;
+  background-color: #f8f8f8;
+}
+
+.card:active {
+  background-color: #f0f0f0;
+}

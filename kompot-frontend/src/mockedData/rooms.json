@@ -1,0 +1,15 @@
+[
+  {
+    "id": "2135",
+    "name": "Fajny pokój",
+    "playerCount": 0,
+    "players": [],
+    "maxPlayerCount": 4,
+    "gameId": "set",
+    "gameState": {
+      "gameOn": false,
+      "remainingCards": [],
+      "boardState": []
+    }
+  }
+]

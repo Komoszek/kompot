@@ -1,0 +1,41 @@
+@import 'common/card.scss';
+
+$gameTile-grow: 5px;
+$tileSize: 300px;
+$tileSize-grow: calc($tileSize + $gameTile-grow * 2);
+$gameTile-fontSize: 1.5em;
+$gameTile-fontSize-hover: calc($gameTile-fontSize * $tileSize-grow / $tileSize);
+
+.gameTile {
+  width: $tileSize;
+  height: $tileSize;
+  max-width: 100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(60, 60, 60, 0.12);
+
+}
+.gameTile > p {
+  font-size: $gameTile-fontSize;
+  font-weight: bold;
+  transition-duration: $transitionTime-hover;
+}
+
+.gameTile:hover > p {
+  font-size: $gameTile-fontSize-hover;
+  transition-duration: $transitionTime-hover;
+}
+
+.gameTile:hover {
+  width: $tileSize-grow;
+  height: $tileSize-grow;
+  margin: -$gameTile-grow;
+  box-shadow: 0 6px 6px rgba(60, 60, 60, 0.2);
+}
+
+.gameTile > img{
+  width: 60%;
+  height: 60%;
+}
