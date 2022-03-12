@@ -14,3 +14,6 @@ in three different places i.e. main directory, `kompot-frontend` directory and `
 npm start
 ```
 in the main directory.
+
+## Credits
+- Base symbols for Set cards were made by [hildjj](https://github.com/hildjj/set-game)
