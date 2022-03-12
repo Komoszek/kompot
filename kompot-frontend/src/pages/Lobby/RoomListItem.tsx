@@ -13,6 +13,7 @@ const RoomListItem: React.FC<RoomListItemProps> = ( props ) => {
     <Link className="roomListItem card" to={`/room/${room.id}`}>
         <div className="roomContent">
           <h2 className="roomName">{room.name}</h2>
+          <p>Players: {room.playerCount}/{room.maxPlayerCount}</p>
         </div>
     </Link>
   );

@@ -7,8 +7,12 @@ export interface GameData {
 }
 
 export interface RoomData extends RoomListItemData {
-  players: string[];
+  players: {[key: string]: PlayerRoomData};
   gameState: SetGameState;
+}
+
+export interface PlayerRoomData {
+  socketCount: number;
 }
 
 export interface RoomListItemData {
@@ -18,4 +22,4 @@ export interface RoomListItemData {
   maxPlayerCount: number;
   gameId: string;
 }
-// add interface for room in roomlist (or not)
+

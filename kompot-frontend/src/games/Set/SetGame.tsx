@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { SetGameState, Card } from '@common/Set/types';
+
 import { SetCard } from './SetCard';
 import { SocketContext } from 'SocketContext';
 import './SetGame.scss';
+
 interface SetGameProps {
   gameState: SetGameState;
   roomId: string;
@@ -82,7 +84,7 @@ export const SetGame: React.FC<SetGameProps> = (props) => {
 
         for(let i = 0; i < prev.length; i++){
           while(res[idx] < prev[i]) idx++;
-          if(res[idx] != prev[i]) newArr.push(prev[i] - idx);
+          if(res[idx] !== prev[i]) newArr.push(prev[i] - idx);
         }
 
         return [...newArr];

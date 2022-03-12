@@ -42,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.1",
+    "js-cookie": "^3.0.1",
+    "react-cookie": "^4.1.1"
   }
 }

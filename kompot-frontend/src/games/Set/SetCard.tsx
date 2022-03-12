@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '@common/Set/types';
 import './SetCard.scss';
 import { Oval, Rhombus, Squiggle } from 'games/Set/BaseSymbols/BaseSymbols'
+import { Hatch } from 'games/Set/BaseSymbols/Patterns'
 
 interface SetCardProps {
   card: Card;
@@ -44,29 +45,23 @@ const CardSymbol: React.FC<CardSymbolProps> = ( props ) => {
     }
   }
 
-  const getHatch = (color: string) => (
-    <defs>
-        <pattern id={`hatch-${color}`} width={5} height={3} patternUnits="userSpaceOnUse">
-          <line stroke={color} x1="0" y1="0" x2="0" y2="10" strokeWidth="2"/>
-        </pattern>
-    </defs>
-  )
-
-  const getFill = (fill: number, color: string) => {
+  const getFill = (fill: number, color: string): [string, JSX.Element] => {
     switch(fill){
       case 0:
       default:
-        return 'none';
+        return ['none', <></>];
       case 1:
-        return `url(#hatch-${color})`;
+        // id collsions happen
+        const id = `hatch-${color}`;
+        return [`url(#${id})`, <Hatch id={id} color={color} />];
       case 2:
-        return color;
+        return [color, <></>];
     }
   }
 
 
   const color = getColor(props.color);
-  const fill = getFill(props.fill, color);
+  const [fill, pattern] = getFill(props.fill, color);
   const shape = getShape(props.shape, fill, color);
 
   return (
@@ -76,8 +71,7 @@ const CardSymbol: React.FC<CardSymbolProps> = ( props ) => {
         height={78}
         width={183}
       >
-      //awful fix but its working
-      {getHatch(color)}
+      {pattern}
       {shape}
   </svg>
   );

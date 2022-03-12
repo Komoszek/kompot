@@ -2,7 +2,7 @@
 This project aims to be modular online muliplayer game service written in TypeScript + React + Node.js. It is a spiritual successor to [setGameServer](https://github.com/Komoszek/setGameServer).
 
 ## Disclaimer
-Although you are currently able to somewhat play single game in [Set](https://en.wikipedia.org/wiki/Set_(card_game)), this project lacks a lot of basic features like: room creation, game restarting, registered/guest accounts, scoreboard, chat etc. My aim is to have it someday in fully working state.
+Although you are currently able to somewhat play games in [Set](https://en.wikipedia.org/wiki/Set_(card_game)), this project lacks a lot of basic features like: proper room creation, game restarting, registered accounts, visible scoreboard, chat etc. My aim is to have it someday in fully working state.
 
 ## Installation
 To install all required dependencies you need to run:

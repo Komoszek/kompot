@@ -25,9 +25,7 @@
       "@common/*": ["../../commons/*"]
     },
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "references": [
         { "path": "../commons" }
     ]

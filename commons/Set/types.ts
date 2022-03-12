@@ -10,4 +10,5 @@ export interface SetGameState {
   gameOn: boolean;
   remainingCards: Card[];
   boardState: Card[];
+  scoreBoard: { [key: string]: number};
 }

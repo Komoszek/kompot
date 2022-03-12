@@ -3,15 +3,21 @@ import { useParams } from 'react-router-dom';
 import { SocketContext } from 'SocketContext';
 import { RoomData } from '@common/types';
 import { SetGame } from 'games/Set/SetGame';
-import { Card } from '@common/Set/types';
+import { useNavigate } from 'react-router-dom';
 
 const Room: React.FC = () => {
   let { roomId } = useParams();
+  const navigate = useNavigate();
   const [room, setRoom] = useState<RoomData>();
   const socket = useContext(SocketContext);
 
   useEffect(() => {
-    socket.on('getGameRoomRes', (res: RoomData) => {
+    socket.on('getGameRoomRes', (res: RoomData|null) => {
+      console.log(res);
+      if(res === null){
+        navigate('/');
+        return;
+      }
       setRoom(res);
       console.log(res);
     });
